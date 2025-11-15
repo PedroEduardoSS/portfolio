@@ -5,32 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="static/portrait.png">
     <link rel="stylesheet" href="style.css">
 
     <title>Portfólio Pedro Eduardo SS</title>
 </head>
 <body>
-    <nav class="w3-sidebar w3-bar-block w3-black" style="width:20%">
-        <a href="#home" class="w3-bar-item w3-button">Início</a>
-        <a href="#about" class="w3-bar-item w3-button">Sobre mim</a>
-        <a href="#skills" class="w3-bar-item w3-button">Habilidades</a>
-        <a href="#contact" class="w3-bar-item w3-button">Contato</a>
-        <a href="./projetos.html" class="w3-bar-item w3-button">Projetos</a>
+    <nav class="w3-sidebar w3-bar-block w3-black" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large"
+        onclick="w3_close()"> &times;</button>
+
+        <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home" aria-hidden="true"></i> Início</a>
+        <a href="./projetos.html" class="w3-bar-item w3-button"><i class="fa fa-briefcase" aria-hidden="true"></i> Projetos</a>
+        <a href="./portuguese-cv.html" class="w3-bar-item w3-button"><i class="fa fa-file-text" aria-hidden="true"></i> Currículo-PTBR</a>
+        <a href="./english-cv.html" class="w3-bar-item w3-button"><i class="fa fa-file-text" aria-hidden="true"></i> Currículo-EN</a>
     </nav>
 
-    <div style="margin-left:25%">
+    <main id="main">
         <section class="w3-container" id="home">
-            <h1>Olá, mundo!</h1>
+            <button id="openNav" class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
+            <br><br>
+        </section>
+        
+        <section class="w3-container" id="home">
+            <img src="static/portrait.png" alt="portrait">
+            <h1> &#128075; Olá, mundo!</h1>
             <p>Meu nome é Pedro Eduardo, atualmente estudando Engenharia de software na Universidade de Brasília e Segurança da Informação na Gran Faculdade.</p>
         </section>
 
         <section class="w3-container" id="about">
-            <h1>Sobre mim</h1>
+            <h1> &#128100; Sobre mim</h1>
             <p>Sou formado em técnico de informática. Eu gosto de estudar sobre computadores, dados, programação, Aprendizado de máquina, IA, testes software and segurança da informação. Meus hobbies são ler livros e jogar. </p>
         </section>
 
         <section class="w3-container" id="skills">
-            <h1>Minhas Habilidades</h1>
+            <h1> &#128187; Minhas Habilidades</h1>
             <p>Abaixo está uma lista das minhas principais habilidades e serviços que posso oferecer, você pode ver alguns exemplos no meu Github (link no rodapé), Eu espero desenvolver mais projetos futuramente.</p>
             <ul class="w3-ul w3-card-4" style="width:75%">
                 <li>Desenvolvimento de software</li>
@@ -45,7 +54,7 @@
         <br><br>
 
         <section class="w3-container" id="contact">
-            <h1>Contato</h1>
+            <h1> &#128236; Contato</h1>
             <form action="https://formsubmit.co/pedroeduardossousa@email.com" method="POST">
                 <label>Nome</label>
                 <input class="w3-input w3-border w3-round-large" type="text" name="name" required>
@@ -56,19 +65,36 @@
                 <label>Menssagem</label>
                 <textarea class="w3-input w3-border w3-round-large" name="msg" id="" cols="30" rows="10" required></textarea>
                 <br>
-                <button class="w3-button w3-green" type="submit">Enviar</button>
+                <div class="w3-center">
+                    <button class="w3-button w3-large w3-green" type="submit">Enviar</button>
+                </div>
             </form>
         </section>
-        <br><br>
-    </div>
+        <br>
+    </main>
     
-    <footer class="w3-center" style="margin-left:25%">
+    <footer id="footer" class="w3-center">
         <a href="www.linkedin.com/in/PedroEduardoSS"><i class="fa fa-linkedin-square" style="font-size:48px;"></i></a>
         <a href="https://github.com/PedroEduardoSS"><i class="fa fa-github-square" style="font-size:48px;"></i></a>
         <p>&copy; Copyright 2025 por Pedro Eduardo</p> 
     </footer>
-        
+       
+    <script>
+        function w3_open() {
+        document.getElementById("main").style.marginLeft = "25%";
+        document.getElementById("footer").style.marginLeft = "25%";
+        document.getElementById("mySidebar").style.width = "25%";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("openNav").style.display = 'none';
+        }
+
+        function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("footer").style.marginLeft = "0%";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+        }
+    </script>
+
 </body>
-
-
 </html>
