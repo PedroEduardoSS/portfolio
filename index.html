@@ -11,10 +11,7 @@
     <title>Portfólio Pedro Eduardo SS</title>
 </head>
 <body>
-    <nav class="w3-sidebar w3-bar-block w3-black" style="display:none" id="mySidebar">
-        <button class="w3-bar-item w3-button w3-large"
-        onclick="w3_close()"> &times;</button>
-
+    <nav class="w3-sidebar w3-bar-block w3-black" id="mySidebar">
         <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home" aria-hidden="true"></i> Início</a>
         <a href="./projetos.html" class="w3-bar-item w3-button"><i class="fa fa-briefcase" aria-hidden="true"></i> Projetos</a>
         <a href="./portuguese-cv.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Currículo-PTBR</a>
@@ -22,39 +19,31 @@
     </nav>
 
     <main id="main" class="w3-content">
-        <section class="w3-container" id="home">
-            <button id="openNav" class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
-            <br><br>
-        </section>
         
         <section class="w3-container" id="home">
             <img src="static/portrait.png" alt="portrait">
-            <h1> &#128075; Olá, mundo!</h1>
-            <p>Meu nome é Pedro Eduardo, atualmente estudando Engenharia de software na Universidade de Brasília e Segurança da Informação na Gran Faculdade.</p>
+            <h1> &#128075; Hello, World!</h1>
+            <p>My name is Pedro Eduardo.</p>
         </section>
 
         <section class="w3-container" id="about">
-            <h1> &#128100; Sobre mim</h1>
-            <p>Estudando e aperfeiçoando minhas habilidades de programação desde 2018 com tecnologias como Python, JS/TS, PHP, SQL, GIT.
+            <h1> &#128100; About me</h1>
+            <p>I've been studying and improving my programming skills since 2018 with technologies such as Python, JS/TS, PHP, SQL, and GIT.
                 <br>
-                Principais frameworks web que tenho familiariedade: Django, Laravel, Flask e FastAPI.
+                My interests are in technology, focusing on cybersecurity, software testing, data analysis, machine learning, and back-end development.
                 <br>
-                Tenho grande interesse pela área de tecnologia, com o foco em Cybersecurity, testes de software, análise de dados, machine learning e desenvolvimento back-end.
-                <br>
-                A minha grande conquista foi o desenvolvimento da Assistente Médica Belle, um programa capaz de prever doenças por meio de dados fornecidos por um usuário.
-                <br>
-                Atualmente estou desenvolvendo novos projetos independentes e procurando uma oportunidade.
+                I'm currently developing new independent projects and seeking opportunities in Cybersecurity, DevSecOps and QA/Software testing focusing in security.
             </p>
         </section>
 
         <section class="w3-container" id="skills">
-            <h1> &#128187; Minhas Habilidades e serviços</h1>
-            <p>Abaixo está uma lista das minhas principais habilidades e serviços que posso oferecer, você pode ver alguns exemplos no meu Github (link no rodapé), Eu espero desenvolver mais projetos futuramente.</p>
+            <h1> &#128187; My skills and services</h1>
+            <p>I can offer the following services:</p>
             <ul class="w3-ul w3-card-4" style="width:90%">
-                <li>1 - Testar o seu software (QA, testes automatizados)</li>
-                <li>2 - Desenvolver soluções baseados em dados (análise de dados e ETL com Airflow)</li>
-                <li>3 - Desenvolver scripts de automação (web scraping, bots de teste, automação de tarefas, github actions)</li>
-                <li>4 - Desenvolvimento web ou APIs (depende do negócio)</li>
+                <li>1 - Testing your software (QA, automated tests with Selenium and Playwright)</li>
+                <li>2 - Developing data-driven solutions (data analysis, ETL)</li>
+                <li>3 - Developing automation scripts (web scraping, testing bots, task automation, GitHub actions)</li>
+                <li>4 - Web development or APIs (depending on the business)</li>
             </ul>
         </section>
         <br><br>
@@ -84,23 +73,6 @@
         <a href="https://github.com/PedroEduardoSS"><i class="fa fa-github-square" style="font-size:48px;"></i></a>
         <p>&copy; Copyright 2025 por Pedro Eduardo</p> 
     </footer>
-       
-    <script>
-        function w3_open() {
-        document.getElementById("main").style.marginLeft = "25%";
-        document.getElementById("footer").style.marginLeft = "25%";
-        document.getElementById("mySidebar").style.width = "25%";
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("openNav").style.display = 'none';
-        }
-
-        function w3_close() {
-        document.getElementById("main").style.marginLeft = "0%";
-        document.getElementById("footer").style.marginLeft = "0%";
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("openNav").style.display = "inline-block";
-        }
-    </script>
 
 </body>
 </html>
